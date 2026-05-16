@@ -1,64 +1,65 @@
 # Remote Patient Monitoring Readmission Prediction
 
-This project explores how machine learning and business intelligence can be used to support decision-making in a Remote Patient Monitoring (RPM) program. The main goal was to predict the likelihood of hospital readmission and translate the model outputs into a practical Power BI dashboard for managerial and operational use.
+This project looks at how machine learning and Power BI can be used to support readmission risk analysis in a Remote Patient Monitoring program. The goal was to identify patients with a higher chance of hospital readmission and present the results in a dashboard that could be understood by both technical and non-technical users.
 
-The original dataset cannot be shared due to privacy and confidentiality restrictions. This repository focuses on the project methodology, model logic, dashboard design, and decision-support value without exposing patient-level data.
+The original dataset cannot be shared because it contains confidential healthcare information. For that reason, this repository focuses on the workflow, model logic, dashboard design, and the business value of the project without including patient records.
 
 ---
 
 ## Project Background
 
-Remote Patient Monitoring programs generate valuable data from patient demographics, device readings, alerts, and clinical notes. However, this information is often spread across different sources and may not be immediately useful for identifying patients who are at higher risk of readmission.
+Remote Patient Monitoring programs collect different types of information, including patient details, device readings, alerts, and clinical notes. These sources can be useful for understanding patient risk, but they usually need to be cleaned, connected, and summarized before they can support decision-making.
 
-This project was designed to turn those data sources into a structured analytics workflow that could help healthcare teams better understand readmission risk and support more proactive follow-up decisions.
-
----
-
-## What This Project Covers
-
-The project followed an analytics process:
-
-1. Reviewed clinical notes to identify readmitted patients, inaccurate readings, and alert-related issues.
-2. Cleaned and combined patient, reading, alert, and note-based information.
-3. Created device-level alert ratio features to better represent abnormal monitoring patterns.
-4. Trained and evaluated Logistic Regression and Decision Tree models.
-5. Extracted model coefficients and decision rules for interpretation.
-6. Rebuilt the model logic inside Power BI using DAX measures.
-7. Designed a dashboard to communicate risk scores, model outputs, and managerial insights.
+This project was built to turn those separate data sources into a structured process for predicting readmission risk and presenting the results in a practical way.
 
 ---
 
-## Key Features
+## Project Workflow
 
-- Clinical-note review for readmission and data-quality validation
-- Alert ratio calculation for monitored devices
-- Logistic Regression model for estimating readmission probability
-- Decision Tree model for explainable readmission classification
-- DAX-based implementation of model logic in Power BI
-- Dashboard pages for risk interpretation, alert analysis, and recommendations
-- Privacy-conscious project structure without confidential patient records
+The project followed these main steps:
+
+1. Reviewed clinical notes to identify readmitted patients, inaccurate readings, and issues with alerts.
+2. Cleaned and combined patient information, readings, alerts, and findings from the notes.
+3. Calculated alert ratios for each monitoring device, such as blood pressure, oxygen, and weight.
+4. Built and tested Logistic Regression and Decision Tree models.
+5. Used Logistic Regression coefficients to estimate the chance of readmission.
+6. Converted Decision Tree outputs into readable decision rules.
+7. Recreated the model logic in Power BI using DAX measures.
+8. Designed a dashboard to present risk estimates, predicted status, and recommendations.
+
+---
+
+## Key Components
+
+- Review of clinical notes to support readmission tracking and data validation
+- Calculation of alert ratios for monitored readings
+- Logistic Regression model to estimate readmission probability
+- Decision Tree model to provide clear prediction rules
+- DAX measures to reproduce model logic inside Power BI
+- Dashboard pages for risk estimation, alert ratio calculation, model output, and recommendations
+- Project structure designed to share the work without exposing confidential data
 
 ---
 
 ## Machine Learning Approach
 
-Two models were used in this project:
+Two models were used in this project.
 
 ### Logistic Regression
 
-Logistic Regression was used to estimate the chance of readmission. The model coefficients were extracted and translated into DAX measures, allowing the dashboard to calculate readmission probability without requiring the original dataset.
+Logistic Regression was used to estimate the probability of readmission. After the model was trained, the coefficients were extracted and used in Power BI so that the dashboard could calculate the chance of readmission directly through DAX measures.
 
 ### Decision Tree
 
-The Decision Tree model was used to provide an interpretable classification of readmission status. The decision rules were extracted and implemented in Power BI so that users could understand how different risk factors contributed to the final prediction.
+The Decision Tree model was used to classify readmission status in a more explainable way. Its decision rules were extracted and implemented in Power BI so that users could see how different inputs affected the final prediction.
 
 ---
 
 ## Power BI Dashboard
 
-The Power BI dashboard was created to make the model outputs easier to understand and use. Instead of displaying confidential patient-level data, the dashboard represents the model logic through calculated measures, decision rules, and interactive inputs.
+The Power BI dashboard was created to make the model outputs easier to use. Instead of showing confidential patient data, the dashboard uses DAX measures, input fields, and model rules to demonstrate how readmission risk can be estimated.
 
-The dashboard includes sections for:
+The dashboard includes pages for:
 
 - Project overview
 - Alert ratio calculation
@@ -66,7 +67,7 @@ The dashboard includes sections for:
 - Readmission status prediction using Decision Tree rules
 - Managerial insights and recommendations
 
-This makes the dashboard a practical decision-support tool rather than only a technical modeling exercise.
+The dashboard connects the technical model results to decisions that managers and care teams may need to make.
 
 ---
 
@@ -74,16 +75,16 @@ This makes the dashboard a practical decision-support tool rather than only a te
 
 The original RPM dataset is not included in this repository.
 
-To protect confidentiality, this repository does not contain:
+This repository does not contain:
 
-- patient-level records
+- patient records
 - clinical notes
 - raw device readings
 - raw alert files
-- identifiable patient information
-- original confidential extracts
+- patient identifiers
+- confidential source files
 
-The shared materials are intended to demonstrate the project workflow, modeling logic, dashboard design, and analytical thinking behind the solution.
+The shared files are included only to demonstrate the project structure, modeling process, dashboard design, and analytical approach.
 
 ---
 
