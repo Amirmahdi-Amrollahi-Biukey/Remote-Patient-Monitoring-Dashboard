@@ -16,7 +16,7 @@ This project was designed to turn those data sources into a structured analytics
 
 ## What This Project Covers
 
-The project followed an end-to-end analytics process:
+The project followed an analytics process:
 
 1. Reviewed clinical notes to identify readmitted patients, inaccurate readings, and alert-related issues.
 2. Cleaned and combined patient, reading, alert, and note-based information.
